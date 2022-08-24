@@ -1,0 +1,167 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ghost-white-color: #fafaff;
+  --light-blue-color: #e4d9ff;
+  --primary-color: #191923;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.heading {
+  font-size: 4rem;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  padding-top: 2rem;
+  justify-content: space-between;
+}
+
+.input-area {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-area input {
+  width: 20rem;
+  height: 3rem;
+  font-size: larger;
+  border: none;
+  border-radius: 50px;
+  padding: 5px 0 5px 5px;
+  margin-right: 1rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.input-area input:focus {
+  -webkit-box-shadow: 0px 0px 19px 3px rgba(26, 214, 189, 1);
+  -moz-box-shadow: 0px 0px 19px 3px rgba(26, 214, 189, 1);
+  box-shadow: 0px 0px 19px 3px rgba(26, 214, 189, 1);
+}
+
+.input-area button {
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--light-blue-color);
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  -webkit-box-shadow: 0px 0px 19px 3px rgb(177, 219, 214);
+  -moz-box-shadow: 0px 0px 19px 3px rgba(177, 219, 214);
+  box-shadow: 0px 0px 19px 3px rgba(177, 219, 214);
+}
+
+.list-area {
+  width: 49%;
+  padding: 2rem;
+}
+
+.list-area h2 {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.list-area .list {
+  width: 100%;
+  list-style: none;
+}
+
+.list-area .list li {
+  width: 100%;
+  height: 3rem;
+  font-size: 2rem;
+  padding-left: 0.5rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  background-color: var(--light-blue-color);
+  color: black;
+  position: relative;
+  cursor: pointer;
+}
+
+.list-area .list li i {
+  height: 100%;
+  margin-left: auto;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.list-area .list li i:hover {
+  color: aquamarine;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+@media only screen and (max-width: 870px) {
+  .heading {
+    font-size: 3rem;
+  }
+  
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-area {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .input-area input {
+    width: 15rem;
+    height: 2.5rem;
+  }
+  
+  .input-area button {
+    width: 7rem;
+    height: 2.5rem;
+    }
+  
+  .list-area {
+    width: 100%;
+  }
+
+  .list-area .list li{
+    font-size: 1.5rem;
+    padding-top: .5rem;
+  }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .input-area {
+      flex-direction: column;
+      align-items: center;
+    }
+    .input-area input {
+      margin-bottom: 1rem;
+      margin-right: 0;
+
+    }
+  }
